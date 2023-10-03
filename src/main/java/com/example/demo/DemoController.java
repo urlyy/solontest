@@ -16,4 +16,10 @@ public class DemoController {
     public String hi(){
         return "hi，可以访问{ip}:{port}/hello?name=qwer";
     }
+
+    @Mapping("/err")
+    public Integer err(@Param String name){
+        return name.length();
+    }
+
 }
