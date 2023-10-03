@@ -19,7 +19,12 @@ public class DemoController {
 
     @Mapping("/err")
     public Integer err(@Param String name){
-        return name.length();
+        Integer len = name.length();
+        String s = null;
+        if(len>5){
+            s = "1234";
+        }
+        return s.length();
     }
 
 }
